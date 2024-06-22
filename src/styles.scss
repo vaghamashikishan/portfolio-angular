@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "primeng/resources/themes/lara-light-blue/theme.css";
+// @import "primeng/resources/primeng.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+@import "primeicons/primeicons.css";
+
+// .p-timeline-event-opposite {
+//   display: none !important;
+// }
+
+@media (max-width: 768px) {
+  .p-timeline .p-timeline-event-opposite {
+    display: none; /* Hide the opposite side content */
+  }
+
+  // .p-timeline .p-timeline-event-content {
+  //   margin-left: 0; /* Ensure the content is full-width */
+  // }
+}
+
+.p-card-body {
+  @apply bg-gray-300 rounded-lg;
+}

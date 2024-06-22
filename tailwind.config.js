@@ -9,8 +9,8 @@ module.exports = {
         primaryButtonColor: "#0f4c75",
         secondaryButtonColor: "#3282b8",
         linkColor: "#bbe1fa",
-        linkColor: "#bbe1fa",
-        borderColor: "#3d3d5c"
+        borderColor: "#3d3d5c",
+        extra: "#dd7732"
       }
     },
   },

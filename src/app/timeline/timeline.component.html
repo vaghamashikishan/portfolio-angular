@@ -1,0 +1,43 @@
+<div class="mt-5">
+    <div class="text-5xl text-center mb-8 text-extra font-bold">Education & Experience</div>
+
+    <!-- For Big Screen  -->
+    <div class="card hidden md:block" data-aos="fade-right">
+        <p-timeline [value]="events" align="alternate" styleClass="customized-timeline">
+            <ng-template pTemplate="marker" let-event>
+                <span
+                    class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1 rounded-full p-2"
+                    [style]="{ 'background-color': event.color }">
+                    <i [class]="event.icon"></i>
+                </span>
+            </ng-template>
+            <ng-template pTemplate="content" let-event data-aos="fade-right">
+                <div class="m-5" data-aos="fade-up">
+                    <p-card [header]="event.header" [subheader]="event.subHeader">
+                        <p class="font-bold" *ngIf="event.cpi">{{event.cpi}}</p>
+                    </p-card>
+                </div>
+            </ng-template>
+        </p-timeline>
+    </div>
+
+    <!-- For mobile screen -->
+    <div class="card md:hidden ml-5">
+        <p-timeline [value]="events" align="left" styleClass="customized-timeline">
+            <ng-template pTemplate="marker" let-event>
+                <span
+                    class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle z-1 shadow-1 rounded-full p-2"
+                    [style]="{ 'background-color': event.color }">
+                    <i [class]="event.icon"></i>
+                </span>
+            </ng-template>
+            <ng-template pTemplate="content" let-event>
+                <div class="m-5" data-aos="fade-left">
+                    <p-card [header]="event.header" [subheader]="event.subHeader">
+                        <p class="font-bold" *ngIf="event.cpi">{{event.cpi}}</p>
+                    </p-card>
+                </div>
+            </ng-template>
+        </p-timeline>
+    </div>
+</div>

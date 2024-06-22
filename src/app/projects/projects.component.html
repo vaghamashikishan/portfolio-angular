@@ -1,0 +1,25 @@
+<div class="mt-14 mb-2">
+    <div class="text-5xl text-center mb-8 text-extra font-bold">Projects</div>
+
+    <div class="flex justify-center">
+
+        <ng-container *ngFor="let project of projects">
+
+            <div class="border p-2 rounded-md mx-3 overflow-auto" data-aos="fade-up">
+                <div class="text-extra text-3xl mb-2 underline">{{project.title}}</div>
+                <div class="text-cyan-400 mb-2">{{project.techStack}}</div>
+                <div class="">
+                    {{project.description}}
+
+                    <ul class="list-disc ml-6 md:ml-10 mt-3" *ngFor="let item of project.keyFeatures">
+                        <li><b>{{item.heading}}</b> {{item.desc}}</li>
+                    </ul>
+                </div>
+                <div class="underline mt-2">
+                    {{project.end}}
+                </div>
+            </div>
+
+        </ng-container>
+    </div>
+</div>

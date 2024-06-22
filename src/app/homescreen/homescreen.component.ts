@@ -11,7 +11,7 @@ export class HomescreenComponent implements AfterContentInit {
   textArray: string[] = ["Kishan Vaghamashi", "Web Developer"];
   typingDelay: number = 200;
   erasingDelay: number = 100;
-  newTextDelay: number = 2000; // Delay between current and next text
+  newTextDelay: number = 1500; // Delay between current and next text
   textArrayIndex: number = 0;
   charIndex: number = 0;
 

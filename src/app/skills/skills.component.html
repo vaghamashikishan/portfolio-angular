@@ -1,0 +1,14 @@
+<div class="mt-5">
+    <div class="text-5xl text-center mb-8 text-extra font-bold">Skills</div>
+    <div class="flex flex-wrap overflow-auto gap-2 justify-center mx-1 py-1.5">
+
+        <ng-container *ngFor="let skill of skills">
+            <div class="border-2 flex flex-col items-center p-1.5 rounded-lg w-28 md:w-72 hoverCard"
+                data-aos="fade-left">
+                <img [src]="skill.svg" class="w-14" alt="" srcset="">
+                {{skill.name}}
+            </div>
+        </ng-container>
+
+    </div>
+</div>
